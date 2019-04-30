@@ -43,6 +43,7 @@ class Graphnetwork():
         self.edges[destination].append(source)
         self.weights[(source, destination)] = cost
         self.weights[(destination, source)] = cost
+        
 graph = Graphnetwork()
 edges = [
     ('X', 'A', 7),
@@ -111,9 +112,12 @@ for edge in edges:
     # Reverse path
     path = path[::-1]
     return path
+# Enter source and destination point
 src = str(input ('Enter source node: '))
 des = str(input ('Enter destination node: '))
+
 Dijkstra(graph, src, des)
+
 print ('No. of Edges:', G_symmetric.number_of_edges())
 print ('No. of Nodes:', G_symmetric.number_of_nodes())
 
@@ -143,6 +147,7 @@ def dijshp(edges, f, t):
                     heappush(q, (next, v2, path))
 
     return float("inf")
+
 if __name__ == "__main__":
     edges = [
         ('X', 'A', 7),
