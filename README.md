@@ -1,1 +1,1 @@
-# kpit-intern-project
+# kpit-project
